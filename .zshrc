@@ -9,7 +9,7 @@ POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_HIDE_HOST_NAME="true"
 
 
-plugins=(git)
+plugins=(git tmuxinator web-search bower brew bundler coffee gem osx)
 source $ZSH/oh-my-zsh.sh
 
 # path
@@ -17,6 +17,13 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 
 # Variables
 export EDITOR='vim'
+
+
+# osx
+
+alias finder-selections='pfs'
+alias finder-window='pfd'
+alias cd-finder='cdf'
 
 # zsh shell
 alias zsh-rc='vi ~/.zshrc'
@@ -28,6 +35,9 @@ alias pb='pbcopy'
 # ruby
 alias cd-gem='~/.rbenv/versions/2*/lib/ruby/gems/2.0.0/gems'
 eval "$(rbenv init -)"
+
+#pry
+alias pry-rc='vi ~/.pryrc'
 
 # nginx
 alias ng='nginx'
@@ -64,6 +74,7 @@ alias gp='git push origin HEAD'
 alias gd='git diff'
 alias gc='git commit -m'
 alias gca='git commit -a -m'
+alias gc-ammend='git commit --amend'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
