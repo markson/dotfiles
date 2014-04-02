@@ -13,7 +13,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # path
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
 
 # Variables
 export EDITOR='vim'
@@ -36,7 +36,8 @@ alias ng-reload='sudo nginx -s reload'
 alias ng-stop='sudo nginx -s stop'
 
 # tmux
-alias tm='tmux a'
+alias tm='tmux'
+alias tma='tmux a'
 alias tm-rc='vi ~/.tmux.conf'
 alias tm-list-buffer='tmux list-buffer'
 alias tm-set-buffer='tmux set-buffer'
