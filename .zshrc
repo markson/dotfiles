@@ -1,52 +1,60 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
 DISABLE_UPDATE_PROMPT=true
 
 ZSH_THEME="powerline"
+
 POWERLINE_DISABLE_RPROMPT="true"
 
 POWERLINE_HIDE_HOST_NAME="true"
 
 
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
+
 # path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
 
 # Variables
 export EDITOR='vim'
 
 # zsh shell
-alias sc="vi ~/.zshrc"
-alias ss='source $HOME/.zshrc'
+alias zsh-rc='vi ~/.zshrc'
+alias zsh-source='source ~/.zshrc'
 
 alias trim="tr -d '\n'"
 alias pb='pbcopy'
 
 # ruby
-alias cd-gem='$HOME/.rbenv/versions/2*/lib/ruby/gems/2.0.0/gems'
+alias cd-gem='~/.rbenv/versions/2*/lib/ruby/gems/2.0.0/gems'
 eval "$(rbenv init -)"
 
 # nginx
-alias nc='vi /usr/local/etc/nginx/nginx.conf'
-alias nr='sudo nginx -s reload'
-alias ns='sudo nginx -s stop'
+alias ng='nginx'
+alias ng-rc='vi /usr/local/etc/nginx/nginx.conf'
+alias ng-reload='sudo nginx -s reload'
+alias ng-stop='sudo nginx -s stop'
 
 # tmux
-alias t="tmux a"
-alias tb="tmux list-buffer"
-alias tba="tmux set-buffer"
+alias tm='tmux a'
+alias tm-rc='vi ~/.tmux.conf'
+alias tm-list-buffer='tmux list-buffer'
+alias tm-set-buffer='tmux set-buffer'
+
+# vim
+alias vi-rc='vi ~/.vimrc'
 
 
 # Kerl init
 source $HOME/erlang/r15b01/activate
 
-# quickfolder
-alias cd-c='cd $HOME/Lin/Codes/C'
-alias cd-ember='cd $HOME/Codes/Ember'
-alias cd-ruby='cd $HOME/Codes/Ruby'
-alias cd-projects='cd $HOME/Codes/Projects'
+# folders
+alias cd-c='cd ~/Lin/Codes/C'
+alias cd-ember='cd ~/Codes/Ember'
+alias cd-ruby='cd ~/Codes/Ruby'
+alias cd-projects='cd ~/Codes/Projects'
+alias cd-dotfiles='cd ~/Library/Mobile\ Documents/dotfiles'
+alias cd-mobile-documents='cd ~/Library/Mobile\ Documents'
 
 # coffeescript2
 
