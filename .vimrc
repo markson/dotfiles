@@ -108,8 +108,9 @@ filetype off                   " required!
  " " Start interactive EasyAlign with a Vim movement
  nmap <Leader>a <Plug>(EasyAlign)
  Bundle 'christoomey/vim-tmux-navigator'
+ Bundle 'Raimondi/delimitMate'
 
- "end of the github repo
+ " # end of the github repo
 
  " vim-scripts repos
  Bundle 'nginx.vim'
@@ -126,3 +127,18 @@ hi CursorColumn cterm=NONE ctermbg=237  guibg=#3A3A3A
 
 filetype plugin indent on     " required!
 
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '--include-vars',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif

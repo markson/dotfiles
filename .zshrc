@@ -9,11 +9,11 @@ POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_HIDE_HOST_NAME="true"
 
 
-plugins=(git tmuxinator web-search bower brew bundler coffee gem osx)
+plugins=(git tmuxinator web-search bower brew bundler coffee gem osx powify)
 source $ZSH/oh-my-zsh.sh
 
 # path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/share/npm/bin
 
 # Variables
 export EDITOR='vim'
@@ -83,6 +83,9 @@ alias ga='git add '
 alias gau='git add -u'
 alias gaa='git add --all'
 alias go='git checkout '
+alias gt='git tag'
+alias gta='git tag -a'
+alias gw='git show'
 # alias git=hub
 
 # ssh
@@ -92,3 +95,14 @@ alias ssh-me='ssh yozloy@markson.me'
 # alias power-on-do-markson-me='curl https://api.digitalocean.com/droplets/1281524/power_on/?client_id=b41c50767f838258a8a8231433f9d20c&api_key=180884f49a255f9b5d857bc5fae1bb69'
 alias pwer-on-do-markson-me='curl https://api.digitalocean.com/droplets/1281524/power_on/?client_id=b41c50767f838258a8a8231433f9d20c&api_key=180884f49a255f9b5d857bc5fae1bb69'
 
+export PATH="/usr/local/sbin:$PATH"
+
+# Less Colors for Man Pages
+
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline]]]
