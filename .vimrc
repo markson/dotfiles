@@ -27,6 +27,15 @@ nmap <leader>vim :e ~/.vimrc<cr>
 nmap <expr> go '/^' . nr2char(getchar()) . '<CR>'
 autocmd! bufwritepost .vimrc source %
 
+"search
+
+set smartcase
+set ignorecase
+set incsearch
+" set hls
+" nnoremap <CR> :noh<CR>
+cmap <C-n> <CR>n/<C-p>
+
 imap jj <Esc>
 set autoindent
 set tabstop=4
@@ -64,7 +73,7 @@ filetype off                   " required!
  let g:ycm_show_diagnostics_ui = 0
  Bundle 'tpope/vim-unimpaired'
  Bundle 'bronson/vim-trailing-whitespace'
- Bundle 'tpope/vim-speeddating'
+ "Bundle 'tpope/vim-speeddating'
  Bundle 'tpope/vim-repeat'
 
  Bundle 'kchmck/vim-coffee-script'
@@ -86,10 +95,14 @@ filetype off                   " required!
  Bundle 'tpope/vim-surround'
  nmap '' ysiw'
  nmap "" ysiw"
- imap <C-> ysiw)
- Bundle 'Lokaltog/vim-easymotion'
- nmap <C-j> <leader><leader>w
- nmap <C-k> <leader><leader>b
+"  imap <C-> ysiw)
+"  Bundle 'Lokaltog/vim-easymotion'
+"  nmap gj <Leader><Leader>j
+"  nmap gk <Leader><Leader>k
+"  map / <Plug>(easymotion-sn)
+"  omap / <Plug>(easymotion-tn)
+"  map n <Plug>(easymotion-next)
+"  map N <Plug>(easymotion-prev)
  Bundle 'nono/vim-handlebars'
 "  Bundle 'godlygeek/tabular'
  Bundle 'regedarek/ZoomWin'
@@ -110,6 +123,14 @@ filetype off                   " required!
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'Raimondi/delimitMate'
 
+        let delimitMate_expand_cr = 1
+        au FileType mail let b:delimitMate_expand_cr = 1
+
+        let delimitMate_expand_space = 1
+        au FileType tcl let b:delimitMate_expand_space = 1
+ Bundle 'mileszs/ack.vim'
+ Bundle 'tpope/vim-speeddating'
+ Bundle 'osyo-manga/vim-over'
  " # end of the github repo
 
  " vim-scripts repos

@@ -48,9 +48,13 @@ alias ng-stop='sudo nginx -s stop'
 # tmux
 alias tm='tmux'
 alias tma='tmux a'
+alias tml='tmux ls'
+alias tmt='tmux attach -t'
 alias tm-rc='vi ~/.tmux.conf'
 alias tm-list-buffer='tmux list-buffer'
 alias tm-set-buffer='tmux set-buffer'
+alias tmrl='tmuxinator list'
+alias tmrs='tmuxinator start'
 
 # vim
 alias vi-rc='vi ~/.vimrc'
@@ -60,7 +64,7 @@ alias vi-rc='vi ~/.vimrc'
 source $HOME/erlang/r15b01/activate
 
 # folders
-alias cd-c='cd ~/Lin/Codes/C'
+alias cd-c='cd ~/Codes/C'
 alias cd-ember='cd ~/Codes/Ember'
 alias cd-ruby='cd ~/Codes/Ruby'
 alias cd-projects='cd ~/Codes/Projects'
@@ -72,6 +76,7 @@ alias cd-mobile-documents='cd ~/Library/Mobile\ Documents'
 # git
 alias gp='git push origin HEAD'
 alias gd='git diff'
+alias gdt='git difftool'
 alias gc='git commit -m'
 alias gca='git commit -a -m'
 alias gc-ammend='git commit --amend'
@@ -106,3 +111,7 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline]]]
+
+# XCODE
+
+export iphone_udid="67ac4386f921a362d92e4690614ff7d5a8243aea"

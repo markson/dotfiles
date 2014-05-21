@@ -5,6 +5,10 @@ if defined?(PryDebugger)
 	Pry.commands.alias_command 'f', 'finish'
 end
 
+Pry::Commands.delete 'c'
+Pry::Commands.delete 'n'
+Pry::Commands.delete 's'
+
 # pretty prompt
     Pry.prompt = [
 		proc { |target_self, nest_level, pry|
