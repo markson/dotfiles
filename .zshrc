@@ -9,7 +9,8 @@ POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_HIDE_HOST_NAME="true"
 
 
-plugins=(git tmuxinator web-search bower brew bundler coffee gem osx powify)
+plugins=(bower git tmuxinator web-search brew bundler coffee gem osx powify opp textobj-between surroundi vi-mode)
+
 source $ZSH/oh-my-zsh.sh
 
 # path
@@ -115,3 +116,27 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline]]]
 # XCODE
 
 export iphone_udid="67ac4386f921a362d92e4690614ff7d5a8243aea"
+
+# node
+source $(brew --prefix nvm)/nvm.sh
+alias nod='node --use-strict --harmony'
+#npm
+alias npmd='npm install --save'
+alias npmdd='npm install --save-dev'
+function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+#twitter cli
+alias tl='t timeline'
+
+#xcode
+
+alias swift='/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift'
+
+#test
+alias test-me='~/Codes/Tests/test_my_work'
+alias test-create='~/Codes/Tests/test_create'
+alias test-edit='~/Codes/Tests/test_edit'
+#vi mode
+# bindkey -v
+
+# end
