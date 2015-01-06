@@ -1,0 +1,9 @@
+[user]
+	email = me@mko.io
+[push]
+	default = simple
+[github]
+	user = mkoxio
+[ghi]
+[ghi]
+	token = !security find-internet-password -a mkoxio -s github.com -l 'ghi token' -w

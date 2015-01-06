@@ -2,14 +2,16 @@ ZSH=$HOME/.oh-my-zsh
 
 DISABLE_UPDATE_PROMPT=true
 
-ZSH_THEME="powerline"
+ZSH_THEME="sorin"
+
 
 POWERLINE_DISABLE_RPROMPT="true"
 
 POWERLINE_HIDE_HOST_NAME="true"
 
 
-plugins=(bower git tmuxinator web-search brew bundler coffee gem osx powify opp textobj-between surroundi vi-mode)
+plugins=()
+#plugins=(bower git tmuxinator web-search brew bundler coffee gem osx powify)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -18,6 +20,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr
 
 # Variables
 export EDITOR='vim'
+export TERM=xterm-256color
 
 
 # osx
@@ -62,18 +65,23 @@ alias vi-rc='vi ~/.vimrc'
 
 
 # Kerl init
-source $HOME/erlang/r15b01/activate
+# source $HOME/erlang/r15b01/activate
 
 # folders
+hash -d code=~/Code
 alias cd-c='cd ~/Codes/C'
 alias cd-ember='cd ~/Codes/Ember'
 alias cd-ruby='cd ~/Codes/Ruby'
 alias cd-projects='cd ~/Codes/Projects'
-alias cd-dotfiles='cd ~/Library/Mobile\ Documents/dotfiles'
-alias cd-mobile-documents='cd ~/Library/Mobile\ Documents'
+alias cd-dotfiles='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/dotfiles'
+alias cd-iCloud-drive='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
+# export d_mobile_docments="${HOME}/Library/Mobile\ Documents"
+# export d_iCloud_drive="${d_mobile_docments}/com\~apple\~CloudDocs"
+# export d_dotfiles="${d_iCloud_drive}/dotfiles"
+#
 
 # coffeescript2
-
 # git
 alias gp='git push origin HEAD'
 alias gd='git diff'
@@ -92,7 +100,7 @@ alias go='git checkout '
 alias gt='git tag'
 alias gta='git tag -a'
 alias gw='git show'
-# alias git=hub
+alias git=hub
 
 # ssh
 ssh-add ~/.ssh/bit ~/.ssh/markson.pem > /dev/null 2>&1
@@ -140,3 +148,5 @@ alias test-edit='~/Codes/Tests/test_edit'
 # bindkey -v
 
 # end
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
